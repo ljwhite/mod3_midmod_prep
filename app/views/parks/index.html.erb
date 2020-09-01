@@ -1,0 +1,11 @@
+<h1>List of Parks</h1>
+<h3> Total Count: <%= @parks.count %> Parks <h3>
+
+<% @parks.each do |park| %>
+  <ul class="park">
+    <li class="name"><%= park.name %></li>
+    <li class="description"><%= park.description %></li>
+    <li class="directions"><%= park.directions %></li>
+    <li class="hours"><%= park.hours %></li>
+  </ul>
+<% end %>
