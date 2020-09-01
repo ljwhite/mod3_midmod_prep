@@ -15,5 +15,6 @@ feature "user can search for house " do
       expect(page).to have_css(".directions")
       expect(page).to have_css(".hours")
     end
+    save_and_open_page
   end
 end

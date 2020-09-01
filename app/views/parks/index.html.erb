@@ -1,11 +1,19 @@
 <h1>List of Parks</h1>
-<h3> Total Count: <%= @parks.count %> Parks <h3>
+<h3> Total Count: <%= @parks.count %> Parks </h3>
 
 <% @parks.each do |park| %>
   <ul class="park">
     <li class="name"><%= park.name %></li>
     <li class="description"><%= park.description %></li>
     <li class="directions"><%= park.directions %></li>
-    <li class="hours"><%= park.hours %></li>
+    <ul class="hours">
+      <li>Monday: <%= park.hours[:monday] %></li>
+      <li>Tuesday: <%= park.hours[:tuesday] %></li>
+      <li>Wednesday: <%= park.hours[:wednesday] %></li>
+      <li>Thursday: <%= park.hours[:thursday] %></li>
+      <li>Friday: <%= park.hours[:friday] %></li>
+      <li>Saturday: <%= park.hours[:saturday] %></li>
+      <li>Sunday: <%= park.hours[:sunday] %></li>
+    </ul>
   </ul>
 <% end %>
